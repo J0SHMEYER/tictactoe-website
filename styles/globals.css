@@ -1,12 +1,12 @@
 .grid {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 15px;
   grid-template-columns: repeat(3, 1fr);
 }
 
 @media screen and (min-width: 1000px) {
   .grid {
-    grid-gap: 3px;
+    grid-gap: 1.5px;
   }
 }
 
@@ -41,8 +41,8 @@
   margin: 1;
   position: absolute;
   left: 50%;
-  -ms-transform: translate(-50%, -20%);
-  transform: translate(-50%, -20%);
+  -ms-transform: translate(-50%, 10%);
+  transform: translate(-50%, 10%);
 }
 
 @media screen and (min-width: 1000px) {
