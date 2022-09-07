@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Square from '../components/Square';
+import Square from './Square';
 type Player = "X" | "O" | "BOTH" | null;
 
 function calculateWinner(squares: Player[]) {
