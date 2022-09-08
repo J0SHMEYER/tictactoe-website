@@ -18,6 +18,8 @@
   height: 20vw;
   max-width: 20vh;
   max-height: 20vh;
+  min-height: 75px;
+  min-width: 75px;
   font-size: 4rem;
   color: #746363;
   border-radius: 25px;
