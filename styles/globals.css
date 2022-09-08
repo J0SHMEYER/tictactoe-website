@@ -1,4 +1,5 @@
 .grid {
+  transition: 0.5s;
   display: grid;
   grid-gap: 15px;
   grid-template-columns: repeat(3, 1fr);
@@ -6,32 +7,42 @@
 
 @media screen and (min-width: 1000px) {
   .grid {
+    transition: 0.2s;
     grid-gap: 1.5px;
   }
 }
 
 .square {
+  transition: 1.5s;
   width: 20vw;
   height: 20vw;
-  max-width: 200px;
-  max-height: 200px;
-  font-size: 5rem;
+  max-width: 20vh;
+  max-height: 20vh;
+  font-size: 4rem;
   color: #746363;
   border-radius: 25px;
+  cursor: pointer;
 }
 
 .square_o {
+  transition: 1.5s;
   background-color: rgb(158, 214, 129);
+  animation: bounce 1s linear;
 }
 
 .square_x {
+  transition: 1.5s;
   background-color: rgb(231, 77, 108);
+  animation: bounce 1s linear;
 }
 
 .reset {
+  margin: 0;
+  transition: 1.5s;
   margin-top: 2rem;
   font-size: 1.5rem;
-  width: 65vw;
+  width: 65vh;
+  max-width: 65vw;
   background-color: rgb(111, 112, 128);
   color: #e8e5e5;
   border: none;
@@ -40,9 +51,39 @@
   cursor: pointer;
   margin: 1;
   position: absolute;
+  justify-content: center;
+  align-items: center;
   left: 50%;
-  -ms-transform: translate(-50%, 10%);
-  transform: translate(-50%, 10%);
+  -ms-transform: translate(-50%, 30%);
+  transform: translate(-50%, 30%);
+  cursor: pointer;
+}
+
+.reset:hover{
+  animation: bounceRestart 1s linear;
+}
+
+@keyframes bounce{
+  20%,50%,80%,to{
+    transform: translateY(0);
+  }
+  40%{
+    transform: translateY(-30px) scale(0.95);
+  }
+  70%{
+    transform: translateY(-15px) scale(0.95);
+  }
+  90%{
+    transform: translateY(-4px) scale(0.95);
+  }
+}
+
+@keyframes bounceRestart{
+  0%,50%,100%,to{
+    transform: translate(-50%, 10%);
+  }25%,75%{
+    transform: translate(-50%, 00%) scale(0.95);
+  }
 }
 
 @media screen and (min-width: 1000px) {
